@@ -29,9 +29,9 @@ jobs:
 
     - name: Download NDK
       run: |
-        wget https://dl.google.com/android/repository/android-ndk-r21e-linux.zip
-        sudo unzip -q android-ndk-r21e-linux.zip -d /opt/android-ndk
-        rm android-ndk-r21e-linux.zip
+        wget https://dl.google.com/android/repository/android-ndk-r26d-linux.zip
+        sudo unzip -q android-ndk-r26d-linux.zip -d /opt/android-ndk
+        rm android-ndk-r26d-linux.zip
 
     - name: Install Buildozer
       run: |
