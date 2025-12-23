@@ -36,12 +36,9 @@ android.api = 33
 android.minapi = 21
 
 # (str) Android NDK version to use
-android.ndk = 26.1.10909125
+android.ndk = 25.2.8567313
 
-# (str) Android NDK path, use this to avoid download
-android.ndk_path = /opt/android-ndk
-
-# (bool) If True, then skip trying to update the Android sdk
+# (bool) If True, then skip trying to update the android sdk
 android.skip_update = False
 
 # (bool) If True, then automatically accept SDK license
