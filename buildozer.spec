@@ -36,7 +36,7 @@ android.api = 33
 android.minapi = 21
 
 # (str) Android NDK version to use
-android.ndk = 25.2.8567316
+android.ndk = 23.2.8567313
 
 # (str) Android NDK path, use this to avoid download
 android.ndk_path = /home/firdaus/.buildozer/android/platform/android-ndk-r25c
