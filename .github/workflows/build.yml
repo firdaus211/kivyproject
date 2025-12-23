@@ -46,3 +46,21 @@ jobs:
       with:
         name: app
         path: bin/*.apk
+
+    - name: Download and Prepare All Dependencies
+      run: |
+        # Buat folder untuk semua bahan
+        sudo mkdir -p /opt/android-ndk /opt/android-sdk /opt/apache-ant
+        # Unduh dan siapkan NDK
+        wget https://dl.google.com/android/repository/android-ndk-r21e-linux.zip
+        sudo unzip -q android-ndk-r21e-linux.zip -d /opt/android-ndk
+        rm android-ndk-r21e-linux.zip
+        # Unduh dan siapkan SDK Tools
+        wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip
+        sudo unzip -q commandlinetools-linux-8512546_latest.zip -d /opt/android-sdk/cmdline-tools
+        rm commandlinetools-linux-8512546_latest.zip
+        # Unduh dan siapkan ANT
+        wget https://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz
+        sudo tar -xzf apache-ant-1.9.4-bin.tar.gz -C /opt/
+        sudo mv /opt/apache-ant-1.9.4 /opt/apache-ant
+        rm apache-ant-1.9.4-bin.tar.gz
