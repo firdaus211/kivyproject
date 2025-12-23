@@ -19,7 +19,6 @@ source.include_exts = py,png,jpg,kv,ttf
 version = 0.1
 
 # (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
 requirements = python3,kivy==2.3.0
 
 #
@@ -36,10 +35,10 @@ android.api = 33
 android.minapi = 21
 
 # (str) Android NDK version to use
-android.ndk = 25.2.8567313
+android.ndk = 21.4.7075529
 
 # (bool) If True, then skip trying to update the android sdk
-android.skip_update = False
+android.skip_update = True
 
 # (bool) If True, then automatically accept SDK license
 android.accept_sdk_license = True
