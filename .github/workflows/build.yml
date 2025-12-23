@@ -18,11 +18,12 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Download NDK Manually
-      run: |
-        wget https://dl.google.com/android/repository/android-ndk-r21e-linux.zip
-        sudo unzip -q android-ndk-r21e-linux.zip -d /usr/local/lib/android/sdk/ndk-r21e
-        rm android-ndk-r21e-linux.zip
+    - name: Cache Buildozer Dependencies
+      uses: actions/cache@v3
+      id: cache
+      with:
+        path: ~/.buildozer
+        key: ${{ runner.os }}-buildozer-${{ hashFiles('buildozer.spec') }}
 
     - name: Install Buildozer
       run: |
@@ -34,7 +35,7 @@ jobs:
         buildozer android debug
       env:
         ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
-        ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk-r21e
+        ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk/25.2.8567313
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
