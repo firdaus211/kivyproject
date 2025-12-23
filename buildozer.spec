@@ -39,8 +39,7 @@ android.minapi = 21
 android.ndk = 26.1.10909125
 
 # (str) Android NDK path, use this to avoid download
-android.ndk_path = /home/firdaus/.buildozer/android/platform/android-ndk-r25c
-nano buildozer.spec
+android.ndk_path = /opt/android-ndk
 
 # (bool) If True, then skip trying to update the Android sdk
 android.skip_update = False
